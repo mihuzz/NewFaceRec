@@ -226,7 +226,7 @@ def welcome_users(identities):
 
     # Allow the program to start detecting identities again
     ready_to_detect_identity = True
-    #cv2.putText(img, str(welcome_message), (20, 100), cv2.FONT_HERSHEY_COMPLEX, 3, (0, 0, 255), 3)
+    
 
 if __name__ == "__main__":
     database = prepare_database()
