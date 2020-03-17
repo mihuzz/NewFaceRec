@@ -211,8 +211,7 @@ def welcome_users(identities):
         print(identities)
         print(identities[0])
         welcome_message += '%s, have a nice day.' % identities[0]
-    # elif len(identities) == 0:
-    #     welcome_message = 'Please go away'
+    
     else:
         for identity_id in range(len(identities)-1):
             welcome_message += '%s, ' % identities[identity_id]
