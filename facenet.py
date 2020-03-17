@@ -102,7 +102,7 @@ def webcam_face_recognizer(database):
         # We do not want to detect a new identity while the program is in the process of identifying another person
         if ready_to_detect_identity:
             img = process_frame(img, frame, face_cascade)
-        #cv2.putText(img, (welcome_users(img)), (20, 100), cv2.FONT_HERSHEY_COMPLEX, 3, (0, 0, 255), 3)
+       
         key = cv2.waitKey(100)
         cv2.imshow("preview", img)
 
@@ -195,7 +195,7 @@ def who_is_it(image, database, model):
         return str("I don't now you, please go away")
     else:
         return str(identity)
-
+#text to speech func
 def speak(text):
     tts = gTTS(text=text, lang ='en')
     filevoicename = "voice.mp3"
@@ -233,7 +233,7 @@ if __name__ == "__main__":
     webcam_face_recognizer(database)
 
 # ### References:
-# https://github.com/Skuldur/facenet-face-recognition 
+# I just modify thise code for ubuntu and add text on the frame with identity :https://github.com/Skuldur/facenet-face-recognition 
 # - Florian Schroff, Dmitry Kalenichenko, James Philbin (2015). [FaceNet: A Unified Embedding for Face Recognition and Clustering](https://arxiv.org/pdf/1503.03832.pdf)
 # - Yaniv Taigman, Ming Yang, Marc'Aurelio Ranzato, Lior Wolf (2014). [DeepFace: Closing the gap to human-level performance in face verification](https://research.fb.com/wp-content/uploads/2016/11/deepface-closing-the-gap-to-human-level-performance-in-face-verification.pdf) 
 # - The pretrained model we use is inspired by Victor Sy Wang's implementation and was loaded using his code: https://github.com/iwantooxxoox/Keras-OpenFace.
